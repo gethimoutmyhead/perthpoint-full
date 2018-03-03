@@ -1,0 +1,5 @@
+[25-Nov-2017 17:38:52 UTC] PHP Fatal error:  Call to undefined function _e() in /home/perthpoi/public_html/wp-content/themes/twentyfifteen/author-bio.php on line 12
+[25-Nov-2017 17:38:52 UTC] PHP Fatal error:  Call to undefined function _e() in /home/perthpoi/public_html/wp-content/themes/twentyfifteen/author-bio.php on line 12
+[25-Nov-2017 17:42:58 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/perthpoi/public_html/wp-content/themes/twentyfifteen/404.php on line 10
+[25-Nov-2017 17:47:28 UTC] PHP Fatal error:  Call to undefined function do_action() in /home/perthpoi/public_html/wp-content/themes/twentyfifteen/footer.php on line 23
+[14-Jan-2018 08:49:51 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/perthpoi/public_html/wp-content/themes/twentyfifteen/404.php on line 10

@@ -1,0 +1,36 @@
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 10:01:19 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[14-Feb-2018 11:04:37 UTC] PHP Warning:  Illegal string offset 'pod' in /home/perthpoi/public_html/wp-content/plugins/pods/components/Templates/includes/element-pod_reference.php on line 14
+[26-Feb-2018 06:05:14 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[26-Feb-2018 06:05:14 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[28-Feb-2018 13:26:43 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[28-Feb-2018 13:26:43 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 13:16:30 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[03-Mar-2018 13:16:30 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 13:16:46 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[03-Mar-2018 13:16:46 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 13:18:20 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[03-Mar-2018 13:18:20 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 13:18:36 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[03-Mar-2018 13:18:36 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 13:31:57 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[03-Mar-2018 13:31:57 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 13:37:10 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 363
+[03-Mar-2018 13:37:10 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/extra-pods-functions.php on line 324
+[03-Mar-2018 14:15:17 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-pp/extra-pods-functions.php on line 363
+[03-Mar-2018 14:15:17 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-pp/extra-pods-functions.php on line 324
+[03-Mar-2018 14:15:49 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-pp/extra-pods-functions.php on line 363
+[03-Mar-2018 14:15:49 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-pp/extra-pods-functions.php on line 324
+[03-Mar-2018 14:24:45 UTC] PHP Warning:  Missing argument 3 for add_feature_image() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-pp/extra-pods-functions.php on line 363
+[03-Mar-2018 14:24:45 UTC] PHP Warning:  Missing argument 3 for approve_host_email() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-pp/extra-pods-functions.php on line 324

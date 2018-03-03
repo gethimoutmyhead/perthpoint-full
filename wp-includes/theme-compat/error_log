@@ -1,0 +1,1 @@
+[15-Feb-2018 01:44:52 UTC] PHP Fatal error:  Call to undefined function post_class() in /home/perthpoi/public_html/wp-includes/theme-compat/embed-content.php on line 13
