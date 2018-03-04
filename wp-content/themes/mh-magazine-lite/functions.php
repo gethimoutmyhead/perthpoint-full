@@ -155,7 +155,3 @@ if (is_plugin_active('woocommerce/woocommerce.php')) {
 }
 
 
-/* extra functions to format Pods magic tag outputs     */    
-include_once 'extra-pods-functions.php';
-
-?>

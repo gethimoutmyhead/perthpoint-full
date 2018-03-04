@@ -8,6 +8,8 @@ function perthpoint_theme_enqueue_styles() {
     );
 
 }
-
 add_action( 'wp_enqueue_scripts', 'perthpoint_theme_enqueue_styles' );
+
+include_once 'extra-pods-functions.php';
+
 ?>
