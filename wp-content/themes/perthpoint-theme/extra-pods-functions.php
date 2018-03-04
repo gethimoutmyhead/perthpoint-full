@@ -7,7 +7,7 @@ function add_custom_script() {
     wp_enqueue_script('google_maps_api');
 
 
-    wp_register_script('custom_script', get_template_directory_uri(). '/js/custom-functions.js', array( 'jquery' ));
+    wp_register_script('custom_script', get_stylesheet_directory_uri(). '/js/custom-functions.js', array( 'jquery' ));
     wp_enqueue_script('custom_script');
 }  
 
@@ -19,7 +19,7 @@ function add_custom_admin_script() {
     wp_enqueue_script('google_maps_api');
 
 
-    wp_register_script('custom_admin_script', get_template_directory_uri(). '/js/custom-admin-functions.js', array( 'jquery' ));
+    wp_register_script('custom_admin_script', get_stylesheet_directory_uri(). '/js/custom-admin-functions.js', array( 'jquery' ));
     wp_enqueue_script('custom_admin_script');
 }  
 
