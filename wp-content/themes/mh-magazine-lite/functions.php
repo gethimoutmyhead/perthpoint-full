@@ -1,6 +1,5 @@
 <?php
 
-
 /***** Fetch Theme Data & Options *****/
 
 $mh_magazine_lite_data = wp_get_theme('mh-magazine-lite');
@@ -154,4 +153,4 @@ if (is_plugin_active('woocommerce/woocommerce.php')) {
 	require_once('woocommerce/mh-custom-woocommerce.php');
 }
 
-
+?>

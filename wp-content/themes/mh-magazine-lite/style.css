@@ -617,7 +617,7 @@ div.wpcf7-response-output { margin: 20px 0 15px; }
 	.mh-loop-thumb, #mh-mobile .mh-posts-focus-thumb-small { max-width: 80px; }
 	.mh-loop-title, #mh-mobile .mh-posts-focus-title-small { font-size: 14px; font-size: 0.875rem; }
 	.mh-loop-meta, .mh-custom-posts-content .mh-meta, .mh-posts-focus-meta-small { display: block; font-size: 11px; font-size: 0.6875rem; }
-    .mh-posts-list-excerpt, #mh-mobile .mh-posts-focus-excerpt-small, .mh-posts-focus-caption-small  { display: none; }
+	.mh-loop-excerpt, .mh-custom-posts-content .mh-excerpt, .mh-posts-list-excerpt, #mh-mobile .mh-posts-focus-excerpt-small, .mh-posts-focus-caption-small  { display: none; }
 	.mh-posts-stacked-item { bottom: 10px; left: 10px; padding-right: 10px; }
 	#mh-mobile .mh-posts-stacked-title-small { font-size: 14px; }
 	#mh-mobile .mh-posts-focus-thumb-small { margin: 0 15px 0 0; }
