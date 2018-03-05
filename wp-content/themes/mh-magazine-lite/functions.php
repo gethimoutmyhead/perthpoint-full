@@ -1,6 +1,5 @@
 <?php
 
-
 /***** Fetch Theme Data & Options *****/
 
 $mh_magazine_lite_data = wp_get_theme('mh-magazine-lite');
@@ -153,9 +152,5 @@ include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 if (is_plugin_active('woocommerce/woocommerce.php')) {
 	require_once('woocommerce/mh-custom-woocommerce.php');
 }
-
-
-/* extra functions to format Pods magic tag outputs     */    
-include_once 'extra-pods-functions.php';
 
 ?>
