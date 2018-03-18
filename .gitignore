@@ -1,6 +1,7 @@
 .htaccess
 wp-content/uploads/
 wp-config.php
+wp-config2.php
 wp-config-sample.php
 make-an-mds
 TrumpSimulator
