@@ -2,6 +2,12 @@
 
 /***** Deprecated functionality *****/
 
+/** Custom Hooks - Scheduled for removal **/
+
+function mh_html_class() {
+    do_action('mh_html_class');
+}
+
 /** Page Title Output - Scheduled for removal **/
 
 if (!function_exists('mh_magazine_lite_page_title')) {
@@ -17,7 +23,7 @@ if (!function_exists('mh_magazine_lite_page_title')) {
 						} elseif (is_author()) {
 							global $author;
 							$user_info = get_userdata($author);
-							printf(_x('Articles by %s', 'post author', 'mh-magazine-lite'), esc_attr($user_info->display_name));
+							printf(esc_html(_x('Articles by %s', 'post author', 'mh-magazine-lite')), esc_attr($user_info->display_name));
 						} elseif (is_day()) {
 							echo get_the_date();
 						} elseif (is_month()) {
@@ -29,15 +35,15 @@ if (!function_exists('mh_magazine_lite_page_title')) {
 							$post_type = get_post_type_object(get_post_type($post));
 							echo esc_attr($post_type->labels->name);
 						} else {
-							_e('Archives', 'mh-magazine-lite');
+							esc_html_e('Archives', 'mh-magazine-lite');
 						}
 					} else {
 						if (is_home()) {
 							echo esc_attr(get_the_title(get_option('page_for_posts', true)));
 						} elseif (is_404()) {
-							_e('Page not found (404)', 'mh-magazine-lite');
+							esc_html_e('Page not found (404)', 'mh-magazine-lite');
 						} elseif (is_search()) {
-							printf(__('Search Results for %s', 'mh-magazine-lite'), esc_attr(get_search_query()));
+							printf(esc_html__('Search Results for %s', 'mh-magazine-lite'), esc_attr(get_search_query()));
 						} else {
 							the_title();
 						}

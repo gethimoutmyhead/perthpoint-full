@@ -1,3 +1,0 @@
-[13-Nov-2016 12:58:42 Australia/Melbourne] PHP Fatal error:  Call to undefined function get_header() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/index.php on line 1
-[13-Nov-2016 13:00:02 Australia/Melbourne] PHP Fatal error:  Call to undefined function get_header() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/index.php on line 1
-[02-Feb-2018 12:39:50 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/perthpoi/public_html/wp-content/themes/mh-magazine-lite/index.php on line 1

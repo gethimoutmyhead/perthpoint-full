@@ -51,12 +51,12 @@ class mh_magazine_lite_posts_focus extends WP_Widget {
 						}
 					echo $args['after_title'];
 				}
-				echo '<div class="mh-row mh-posts-focus-widget clearfix">' . "\n";
+				echo '<div class="mh-row mh-posts-focus-widget mh-clearfix">' . "\n";
 					while ($widget_posts->have_posts()) : $widget_posts->the_post();
 						if ($counter === 1) { ?>
-							<div class="mh-col-3-4 mh-posts-focus-wrap<?php echo esc_attr($alignment); ?> clearfix">
-								<div class="mh-col-3-4 mh-posts-focus-wrap mh-posts-focus-large clearfix">
-									<article class="post-<?php the_ID(); ?> mh-posts-focus-item mh-posts-focus-item-large clearfix">
+							<div class="mh-col-3-4 mh-posts-focus-wrap<?php echo esc_attr($alignment); ?> mh-clearfix">
+								<div class="mh-col-3-4 mh-posts-focus-wrap mh-posts-focus-large mh-clearfix">
+									<article class="post-<?php the_ID(); ?> mh-posts-focus-item mh-posts-focus-item-large mh-clearfix">
 										<figure class="mh-posts-focus-thumb mh-posts-focus-thumb-large">
 											<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php
 												if (has_post_thumbnail()) {
@@ -74,17 +74,17 @@ class mh_magazine_lite_posts_focus extends WP_Widget {
 										<div class="mh-meta mh-posts-focus-meta mh-posts-focus-meta-large">
 											<?php mh_magazine_lite_loop_meta(); ?>
 										</div>
-										<div class="mh-posts-focus-excerpt mh-posts-focus-excerpt-large clearfix">
+										<div class="mh-posts-focus-excerpt mh-posts-focus-excerpt-large mh-clearfix">
 											<?php the_excerpt(); ?>
 										</div>
 									</article>
 								</div><?php
 						}
 						if ($counter === 2) {
-							echo '<div class="mh-col-1-4 mh-posts-focus-wrap mh-posts-focus-small mh-posts-focus-small-inner clearfix">' . "\n";
+							echo '<div class="mh-col-1-4 mh-posts-focus-wrap mh-posts-focus-small mh-posts-focus-small-inner mh-clearfix">' . "\n";
 						}
 						if ($counter >= 2) { ?>
-							<article class="post-<?php the_ID(); ?> mh-posts-focus-item mh-posts-focus-item-small clearfix">
+							<article class="post-<?php the_ID(); ?> mh-posts-focus-item mh-posts-focus-item-small mh-clearfix">
 								<figure class="mh-posts-focus-thumb mh-posts-focus-thumb-small">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php
 										if (has_post_thumbnail()) {
@@ -102,7 +102,7 @@ class mh_magazine_lite_posts_focus extends WP_Widget {
 								<div class="mh-meta mh-posts-focus-meta mh-posts-focus-meta-small">
 									<?php mh_magazine_lite_loop_meta(); ?>
 								</div>
-								<div class="mh-posts-focus-excerpt mh-posts-focus-excerpt-small clearfix">
+								<div class="mh-posts-focus-excerpt mh-posts-focus-excerpt-small mh-clearfix">
 									<?php the_excerpt(); ?>
 								</div>
 							</article><?php
@@ -112,7 +112,7 @@ class mh_magazine_lite_posts_focus extends WP_Widget {
 						}
 						if ($counter === 3) {
 							echo '</div>' . "\n";
-							echo '<div class="mh-col-1-4 mh-posts-focus-wrap mh-posts-focus-small mh-posts-focus-outer clearfix">' . "\n";
+							echo '<div class="mh-col-1-4 mh-posts-focus-wrap mh-posts-focus-small mh-posts-focus-outer mh-clearfix">' . "\n";
 						}
 						if ($counter === $max_posts) {
 							echo '</div>' . "\n";

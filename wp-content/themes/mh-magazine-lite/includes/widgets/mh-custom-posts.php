@@ -47,9 +47,9 @@ class mh_custom_posts_widget extends WP_Widget {
 					}
 				echo $args['after_title'];
 			} ?>
-			<ul class="mh-custom-posts-widget clearfix"><?php
+			<ul class="mh-custom-posts-widget mh-clearfix"><?php
 				while ($widget_loop->have_posts()) : $widget_loop->the_post(); ?>
-					<li class="post-<?php the_ID(); ?> mh-custom-posts-item mh-custom-posts-small clearfix">
+					<li class="post-<?php the_ID(); ?> mh-custom-posts-item mh-custom-posts-small mh-clearfix">
 						<figure class="mh-custom-posts-thumb">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php
 								if (has_post_thumbnail()) {
@@ -121,7 +121,7 @@ class mh_custom_posts_widget extends WP_Widget {
             			<option value="<?php echo absint($cat->cat_ID); ?>" <?php selected($cat->cat_ID, $instance['category']); ?>><?php echo esc_html($cat->cat_name) . ' (' . absint($cat->category_count) . ')'; ?></option><?php
             		} ?>
             </select>
-            <small><?php _e('Select a category to display posts from.', 'mh-magazine-lite'); ?></small>
+            <small><?php esc_html_e('Select a category to display posts from.', 'mh-magazine-lite'); ?></small>
 		</p>
 		<p>
         	<label for="<?php echo esc_attr($this->get_field_id('tags')); ?>"><?php esc_html_e('Filter Posts by Tags (e.g. lifestyle):', 'mh-magazine-lite'); ?></label>

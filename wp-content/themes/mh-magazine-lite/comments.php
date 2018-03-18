@@ -9,7 +9,7 @@ if (have_comments()) {
 		<div id="mh-comments" class="mh-comments-wrap">
 			<h4 class="mh-widget-title">
 				<span class="mh-widget-title-inner">
-					<?php printf(_n('1 Comment', '%1$s Comments', $comment_count, 'mh-magazine-lite'), number_format_i18n($comment_count)); ?>
+					<?php printf(esc_html(_n('%d Comment', '%d Comments', $comment_count, 'mh-magazine-lite')), number_format_i18n($comment_count)); ?>
 				</span>
 			</h4>
 			<ol class="commentlist mh-comment-list">
@@ -27,7 +27,7 @@ if (have_comments()) {
 		$ping_count = count($comments_by_type['pings']); ?>
 		<h4 class="mh-widget-title">
 			<span class="mh-widget-title-inner">
-				<?php printf(_n('1 Trackback / Pingback', '%1$s Trackbacks / Pingbacks', $ping_count, 'mh-magazine-lite'), number_format_i18n($ping_count)); ?>
+				<?php printf(esc_html(_n('%d Trackback / Pingback', '%d Trackbacks / Pingbacks', $ping_count, 'mh-magazine-lite')), number_format_i18n($ping_count)); ?>
 			</span>
 		</h4>
 		<ol class="pinglist mh-ping-list">

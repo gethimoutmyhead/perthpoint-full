@@ -1,16 +1,5 @@
 <?php
 
-/***** Add CSS classes to HTML tag *****/
-
-if (!function_exists('mh_magazine_lite_html_class')) {
-	function mh_magazine_lite_html_class() {
-		$mh_magazine_lite_options = mh_magazine_lite_theme_options();
-		isset($mh_magazine_lite_options['full_bg']) && $mh_magazine_lite_options['full_bg'] == 1 ? $fullbg = ' fullbg' : $fullbg = '';
-		echo $fullbg;
-	}
-}
-add_action('mh_html_class', 'mh_magazine_lite_html_class');
-
 /***** Add CSS classes to body tag *****/
 
 if (!function_exists('mh_magazine_lite_body_class')) {
@@ -43,7 +32,7 @@ add_action('mh_after_footer', 'mh_magazine_boxed_container_close');
 
 if (!function_exists('mh_magazine_lite_custom_header')) {
 	function mh_magazine_lite_custom_header() {
-		echo '<div class="mh-custom-header clearfix">' . "\n";
+		echo '<div class="mh-custom-header mh-clearfix">' . "\n";
 			if (get_header_image()) {
 				echo '<a class="mh-header-image-link" href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name')) . '" rel="home">' . "\n";
 					echo '<img class="mh-header-image" src="' . esc_url(get_header_image()) . '" height="' . esc_attr(get_custom_header()->height) . '" width="' . esc_attr(get_custom_header()->width) . '" alt="' . esc_attr(get_bloginfo('name')) . '" />' . "\n";
@@ -106,6 +95,16 @@ if (!function_exists('mh_magazine_lite_archive_title_prefix')) {
 }
 add_filter('get_the_archive_title', 'mh_magazine_lite_archive_title_prefix');
 
+/***** Display Posts on Archives *****/
+
+if (!function_exists('mh_magazine_lite_loop_layout')) {
+	function mh_magazine_lite_loop_layout() {
+		while (have_posts()) : the_post();
+			get_template_part('content', 'loop');
+		endwhile;
+	}
+}
+
 /***** Post Meta *****/
 
 if (!function_exists('mh_magazine_lite_post_meta')) {
@@ -114,7 +113,7 @@ if (!function_exists('mh_magazine_lite_post_meta')) {
 			echo '<span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="' . esc_url(get_month_link(get_the_time('Y'), get_the_time('m'))) . '">' . get_the_date() . '</a></span>' . "\n";
 			echo '<span class="entry-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>' . "\n";
 			echo '<span class="entry-meta-categories"><i class="fa fa-folder-open-o"></i>' . get_the_category_list(', ', '') . '</span>' . "\n";
-			echo '<span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-scroll" href="' . esc_url(get_permalink() . '#mh-comments') . '">' . get_comments_number() . '</a></span>' . "\n";
+			echo '<span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-scroll" href="' . esc_url(get_permalink() . '#mh-comments') . '">' . absint(get_comments_number()) . '</a></span>' . "\n";
 		echo '</p>' . "\n";
 	}
 }
@@ -143,8 +142,8 @@ if (!function_exists('mh_magazine_lite_featured_image')) {
 			$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'mh-magazine-lite-content');
 			echo "\n" . '<figure class="entry-thumbnail">' . "\n";
 				echo '<img src="' . esc_url($thumbnail[0]) . '" alt="' . esc_attr(get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true)) . '" title="' . esc_attr(get_post(get_post_thumbnail_id())->post_title) . '" />' . "\n";
-				if (get_post(get_post_thumbnail_id())->post_excerpt) {
-					echo '<figcaption class="wp-caption-text">' . wp_kses_post(get_post(get_post_thumbnail_id())->post_excerpt) . '</figcaption>' . "\n";
+				if (get_the_post_thumbnail_caption()) {
+					echo '<figcaption class="wp-caption-text">' . wp_kses_post(get_the_post_thumbnail_caption()) . '</figcaption>' . "\n";
 				}
 			echo '</figure>' . "\n";
 		}
@@ -176,7 +175,7 @@ if (!function_exists('mh_magazine_lite_postnav')) {
 			$prev_post = get_previous_post();
 			$next_post = get_next_post();
 			if (!empty($prev_post) || !empty($next_post) || $attachment) {
-				echo '<nav class="mh-post-nav mh-row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">' . "\n";
+				echo '<nav class="mh-post-nav mh-row mh-clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">' . "\n";
 					if (!empty($prev_post) || $attachment) {
 						echo '<div class="mh-col-1-2 mh-post-nav-item mh-post-nav-prev">' . "\n";
 							if ($attachment) {
@@ -249,7 +248,7 @@ if (!function_exists('mh_magazine_lite_comments')) {
 		$GLOBALS['comment'] = $comment; ?>
 		<li id="comment-<?php comment_ID() ?>" <?php comment_class('mh-comment-item'); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="mh-comment-body">
-				<footer class="mh-comment-footer clearfix">
+				<footer class="mh-comment-footer mh-clearfix">
 					<figure class="mh-comment-gravatar">
 						<?php echo get_avatar($comment->comment_author_email, 80); ?>
 					</figure>
@@ -301,7 +300,7 @@ add_filter('comment_form_default_fields', 'mh_magazine_lite_comment_fields');
 
 if (!function_exists('mh_magazine_lite_comment_count')) {
 	function mh_magazine_lite_comment_count() {
-		echo '<a class="mh-comment-count-link" href="' . esc_url(get_permalink() . '#mh-comments') . '">' . get_comments_number() . '</a>';
+		echo '<a class="mh-comment-count-link" href="' . esc_url(get_permalink() . '#mh-comments') . '">' . absint(get_comments_number()) . '</a>';
 	}
 }
 
@@ -309,20 +308,13 @@ if (!function_exists('mh_magazine_lite_comment_count')) {
 
 if (!function_exists('mh_magazine_lite_pagination')) {
 	function mh_magazine_lite_pagination() {
-		global $wp_query;
-	    $big = 9999;
-	    $paginate_links = paginate_links(array(
-	    	'base' 		=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-	    	'format' 	=> '?paged=%#%',
-	    	'current' 	=> max(1, get_query_var('paged')),
-	    	'prev_next' => true,
-	    	'prev_text' => esc_html__('&laquo;', 'mh-magazine-lite'),
-	    	'next_text' => esc_html__('&raquo;', 'mh-magazine-lite'),
-	    	'total' 	=> $wp_query->max_num_pages)
-	    );
-		if ($paginate_links) {
-	    	echo '<div class="mh-loop-pagination clearfix">';
-				echo $paginate_links;
+		if (get_the_posts_pagination()) {
+			echo '<div class="mh-loop-pagination mh-clearfix">';
+				the_posts_pagination(array(
+					'mid_size' => 1,
+					'prev_text' => esc_html__('&laquo;', 'mh-magazine-lite'),
+					'next_text' => esc_html__('&raquo;', 'mh-magazine-lite'),
+				));
 			echo '</div>';
 		}
 	}
@@ -333,12 +325,67 @@ if (!function_exists('mh_magazine_lite_pagination')) {
 if (!function_exists('mh_magazine_lite_paginated_posts')) {
 	function mh_magazine_lite_paginated_posts($content) {
 		if (is_singular() && in_the_loop()) {
-			$content .= wp_link_pages(array('before' => '<div class="pagination clearfix">', 'after' => '</div>', 'link_before' => '<span class="pagelink">', 'link_after' => '</span>', 'nextpagelink' => __('&raquo;', 'mh-magazine-lite'), 'previouspagelink' => __('&laquo;', 'mh-magazine-lite'), 'pagelink' => '%', 'echo' => 0));
+			$content .= wp_link_pages(array('before' => '<div class="pagination mh-clearfix">', 'after' => '</div>', 'link_before' => '<span class="pagelink">', 'link_after' => '</span>', 'nextpagelink' => esc_html__('&raquo;', 'mh-magazine-lite'), 'previouspagelink' => esc_html__('&laquo;', 'mh-magazine-lite'), 'pagelink' => '%', 'echo' => 0));
 		}
 		return $content;
 	}
 }
 add_filter('the_content', 'mh_magazine_lite_paginated_posts', 1);
+
+/***** Footer Widget Areas *****/
+
+if (!function_exists('mh_magazine_lite_footer_widgets')) {
+	function mh_magazine_lite_footer_widgets() {
+		$footer_1 = ''; $footer_2 = ''; $footer_3 = ''; $footer_4 = ''; $footer_class = ''; $footer_columns = 0;
+		if (is_active_sidebar('footer-1')) {
+			$footer_1 = 1; $footer_columns++;
+		}
+		if (is_active_sidebar('footer-2')) {
+			$footer_2 = 1; $footer_columns++;
+		}
+		if (is_active_sidebar('footer-3')) {
+			$footer_3 = 1; $footer_columns++;
+		}
+		if (is_active_sidebar('footer-4')) {
+			$footer_4 = 1; $footer_columns++;
+		}
+		if ($footer_columns === 4) {
+			$footer_class = 'mh-col-1-4 mh-widget-col-1 mh-footer-4-cols ';
+		} elseif ($footer_columns === 3) {
+			$footer_class = 'mh-col-1-3 mh-widget-col-1 mh-footer-3-cols ';
+		} elseif ($footer_columns === 2) {
+			$footer_class = 'mh-col-1-2 mh-widget-col-2 mh-footer-2-cols ';
+		} else {
+			$footer_class = 'mh-col-1-1 mh-home-wide ';
+		}
+		if ($footer_1 || $footer_2 || $footer_3 || $footer_4) {
+			echo '<footer class="mh-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">' . "\n";
+				echo '<div class="mh-container mh-container-inner mh-footer-widgets mh-row mh-clearfix">' . "\n";
+					if ($footer_1) {
+						echo '<div class="' . esc_attr($footer_class) . ' mh-footer-area mh-footer-1">' . "\n";
+							dynamic_sidebar('footer-1');
+						echo '</div>' . "\n";
+					}
+					if ($footer_2) {
+						echo '<div class="' . esc_attr($footer_class) . ' mh-footer-area mh-footer-2">' . "\n";
+							dynamic_sidebar('footer-2');
+						echo '</div>' . "\n";
+					}
+					if ($footer_3) {
+						echo '<div class="' . esc_attr($footer_class) . ' mh-footer-area mh-footer-3">' . "\n";
+							dynamic_sidebar('footer-3');
+						echo '</div>' . "\n";
+					}
+					if ($footer_4) {
+						echo '<div class="' . esc_attr($footer_class) . ' mh-footer-area mh-footer-4">' . "\n";
+							dynamic_sidebar('footer-4');
+						echo '</div>' . "\n";
+					}
+				echo '</div>' . "\n";
+			echo '</footer>' . "\n";
+		}
+	}
+}
 
 /***** Modify Appearance of WP Tag Cloud Widget *****/
 

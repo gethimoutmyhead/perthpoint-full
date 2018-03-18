@@ -8,9 +8,6 @@ $mh_magazine_lite_options = get_option('mh_magazine_lite_options');
 
 /***** Custom Hooks *****/
 
-function mh_html_class() {
-    do_action('mh_html_class');
-}
 function mh_before_header() {
     do_action('mh_before_header');
 }
@@ -38,10 +35,6 @@ function mh_after_footer() {
 function mh_before_container_close() {
     do_action('mh_before_container_close');
 }
-
-/***** Enable Shortcodes inside Widgets	*****/
-
-add_filter('widget_text', 'do_shortcode');
 
 /***** Theme Setup *****/
 

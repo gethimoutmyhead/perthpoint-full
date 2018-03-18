@@ -9,7 +9,7 @@ blockquote { padding: 5px 15px 5px 0; border-right: 5px solid #e64946; border-le
 .mh-left-sb #main-content { float: left; margin-right: 2.5%; margin-left: 0; }
 .mh-home-area-4 { margin-right: 3.52%; margin-left: 0; }
 [class*='mh-col-'] { float: right; margin-right: 2.5%; margin-left: 0; }
-.screen-reader-text, .mh-author-box .screen-reader-text, .search-form .screen-reader-text { right: -9999rem; left: auto; }
+.screen-reader-text { right: -9999rem; left: auto; }
 .entry-content ul, .entry-content ol { margin: 0 40px 20px 0; }
 .entry-content ul ul, .entry-content ol ol { margin: 0 40px 0 0; }
 dl { margin: 0 20px 10px 0; }
@@ -74,6 +74,8 @@ dd { margin-right: 20px; margin-left: 0; }
 .mh-tab-button { float: right; }
 .mh-tab-comment-avatar { float: right; margin: 0 0 0 10px; }
 .widget_rss .rss-date { margin-left: 5px; margin-right: 0; }
+.textwidget ul, .textwidget ol { margin: 0 15px 20px 0; }
+.textwidget ul ul, .textwidget ol ol { margin: 0 15px 0 0; }
 #wp-calendar caption, #wp-calendar #prev { text-align: right; }
 .tagcloud a { margin: 0 0 8px 4px; }
 

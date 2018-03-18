@@ -1,6 +1,6 @@
 <?php /* The template for displaying image attachments. */ ?>
 <?php get_header(); ?>
-<div class="mh-wrapper clearfix">
+<div class="mh-wrapper mh-clearfix">
 	<div id="main-content" class="mh-content" role="main"><?php
 		while (have_posts()) : the_post();
 			mh_before_post_content(); ?>
@@ -20,7 +20,7 @@
 					<?php } ?>
 				</figure>
 				<?php if ($post->post_content != '') { ?>
-					<div class="mh-attachment-content entry-content clearfix">
+					<div class="mh-attachment-content entry-content mh-clearfix">
 						<?php the_content(); ?>
 					</div>
 				<?php } ?>

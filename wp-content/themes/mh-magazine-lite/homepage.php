@@ -1,12 +1,12 @@
 <?php /* Template Name: Homepage */ ?>
 <?php get_header(); ?>
-<div class="mh-wrapper mh-home clearfix">
+<div class="mh-wrapper mh-home mh-clearfix">
 	<?php dynamic_sidebar('home-1'); ?>
 	<?php if (is_active_sidebar('home-2') || is_active_sidebar('home-3') || is_active_sidebar('home-4') || is_active_sidebar('home-5')) : ?>
 		<div id="main-content" class="mh-content mh-home-content">
 			<?php dynamic_sidebar('home-2'); ?>
 			<?php if (is_active_sidebar('home-3') || is_active_sidebar('home-4')) : ?>
-				<div class="mh-home-columns clearfix">
+				<div class="mh-home-columns mh-clearfix">
 					<?php if (is_active_sidebar('home-3')) { ?>
 		    			<div class="mh-widget-col-1 mh-sidebar mh-home-sidebar mh-home-area-3">
 			    			<?php dynamic_sidebar('home-3'); ?>
@@ -20,7 +20,7 @@
 									</span>
 								</h4>
 								<div class="textwidget">
-									<?php printf(esc_html__('Please navigate to %1s in your WordPress dashboard and add some widgets into the %1s widget area.', 'mh-magazine-lite'), '<strong>' . __('Appearance &#8594; Widgets', 'mh-magazine-lite') . '</strong>', '<em>' . sprintf(esc_html_x('Home %d - 1/3 Width', 'widget area name', 'mh-magazine-lite'), 3) . '</em>'); ?>
+									<?php printf(esc_html__('Please navigate to %1$1s in your WordPress dashboard and add some widgets into the %2$2s widget area.', 'mh-magazine-lite'), '<strong>' . esc_html__('Appearance &#8594; Widgets', 'mh-magazine-lite') . '</strong>', '<em>' . sprintf(esc_html_x('Home %d - 1/3 Width', 'widget area name', 'mh-magazine-lite'), 3) . '</em>'); ?>
 								</div>
 							</div>
 						</div>
@@ -38,7 +38,7 @@
 									</span>
 								</h4>
 								<div class="textwidget">
-									<?php printf(esc_html__('Please navigate to %1s in your WordPress dashboard and add some widgets into the %1s widget area.', 'mh-magazine-lite'), '<strong>' . __('Appearance &#8594; Widgets', 'mh-magazine-lite') . '</strong>', '<em>' . sprintf(esc_html_x('Home %d - 1/3 Width', 'widget area name', 'mh-magazine-lite'), 4) . '</em>'); ?>
+									<?php printf(esc_html__('Please navigate to %1$1s in your WordPress dashboard and add some widgets into the %2$2s widget area.', 'mh-magazine-lite'), '<strong>' . esc_html__('Appearance &#8594; Widgets', 'mh-magazine-lite') . '</strong>', '<em>' . sprintf(esc_html_x('Home %d - 1/3 Width', 'widget area name', 'mh-magazine-lite'), 4) . '</em>'); ?>
 								</div>
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 					</span>
 				</h4>
 				<div class="textwidget">
-					<?php printf(esc_html__('Please navigate to %1s in your WordPress dashboard and add some widgets into the %1s widget area.', 'mh-magazine-lite'), '<strong>' . __('Appearance &#8594; Widgets', 'mh-magazine-lite') . '</strong>', '<em>' . sprintf(esc_html_x('Home %d - 1/3 Width', 'widget area name', 'mh-magazine-lite'), 6) . '</em>'); ?>
+					<?php printf(esc_html__('Please navigate to %1$1s in your WordPress dashboard and add some widgets into the %2$2s widget area.', 'mh-magazine-lite'), '<strong>' . esc_html__('Appearance &#8594; Widgets', 'mh-magazine-lite') . '</strong>', '<em>' . sprintf(esc_html_x('Home %d - 1/3 Width', 'widget area name', 'mh-magazine-lite'), 6) . '</em>'); ?>
 				</div>
 			</div>
 		</div>

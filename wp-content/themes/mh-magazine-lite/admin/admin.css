@@ -7,9 +7,9 @@
 
 .theme-info-wrap { margin: 25px 40px 0 20px; max-width: 1050px; position: relative; }
 .theme-info-wrap img { max-width: 100%; }
-.theme-info-wrap .clearfix:before, .theme-info-wrap .clearfix:after { content: " "; display: table; }
-.theme-info-wrap .clearfix:after { clear: both; }
-.theme-info-wrap .clearfix { *zoom: 1; }
+.theme-info-wrap .mh-clearfix:before, .theme-info-wrap .mh-clearfix:after { content: " "; display: table; }
+.theme-info-wrap .mh-clearfix:after { clear: both; }
+.theme-info-wrap .mh-clearfix { *zoom: 1; }
 .theme-info-wrap .mh-row [class*='mh-col-']:first-child { margin: 0; }
 .theme-info-wrap [class*='mh-col-'] { float: left; margin-left: 2.5%; overflow: hidden; }
 .theme-info-wrap .mh-col-1-2 { width: 48.75%; }
@@ -21,7 +21,7 @@
 .theme-info-wrap h1 { font-size: 40px; font-size: 2.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 0; color: #333333; }
 .theme-info-wrap h3 { font-size: 24px; font-size: 1.5rem; line-height: 1.2; }
 .theme-info-wrap h4 { font-size: 18px; font-size: 1.125rem; margin: 10px 0; margin: 0.625rem 0; }
-.theme-info-wrap .theme-description { font-size: 18px; font-size: 1.125rem; font-weight: 400; line-height: 1.5; color: #777777; }
+.theme-info-wrap .theme-description { font-size: 17px; font-size: 1.0625rem; font-weight: 400; line-height: 1.5; color: #777777; }
 .theme-info-wrap .theme-links p strong { font-size: 14px; font-size: 0.875rem; margin-right: 16px; margin-right: 1rem; }
 .theme-info-wrap .theme-links p a { font-size: 14px; font-size: 0.875rem; margin-right: 16px; margin-right: 1rem; }
 #getting-started { margin: 16px 0; margin: 1rem 0; }

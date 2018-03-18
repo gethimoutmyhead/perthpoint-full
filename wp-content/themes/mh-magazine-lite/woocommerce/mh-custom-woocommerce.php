@@ -3,13 +3,16 @@
 /***** Declare WooCommerce Compatibility *****/
 
 add_theme_support('woocommerce');
+add_theme_support('wc-product-gallery-zoom');
+add_theme_support('wc-product-gallery-lightbox');
+add_theme_support('wc-product-gallery-slider');
 
 /***** Custom WooCommerce Markup *****/
 
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 
 function mh_magazine_lite_wrapper_start() {
-	echo '<div class="mh-wrapper clearfix">' . "\n";
+	echo '<div class="mh-wrapper mh-clearfix">' . "\n";
 		echo '<div id="main-content" class="mh-content entry-content" role="main" itemprop="mainContentOfPage">' . "\n";
 }
 remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);

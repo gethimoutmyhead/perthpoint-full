@@ -92,7 +92,7 @@ class mh_magazine_lite_posts_large extends WP_Widget {
             			<option value="<?php echo absint($cat->cat_ID); ?>" <?php selected($cat->cat_ID, $instance['category']); ?>><?php echo esc_html($cat->cat_name) . ' (' . absint($cat->category_count) . ')'; ?></option><?php
             		} ?>
             </select>
-            <small><?php _e('Select a category to display posts from.', 'mh-magazine-lite'); ?></small>
+            <small><?php esc_html_e('Select a category to display posts from.', 'mh-magazine-lite'); ?></small>
 		</p>
 		<p>
         	<label for="<?php echo esc_attr($this->get_field_id('tags')); ?>"><?php esc_html_e('Filter Posts by Tags (e.g. lifestyle):', 'mh-magazine-lite'); ?></label>

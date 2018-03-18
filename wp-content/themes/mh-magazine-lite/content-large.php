@@ -20,7 +20,7 @@
 				<?php mh_magazine_lite_loop_meta(); ?>
 			</div>
 		</header>
-		<div class="mh-posts-large-excerpt clearfix">
+		<div class="mh-posts-large-excerpt mh-clearfix">
 			<?php the_excerpt(); ?>
 		</div>
 	</div>

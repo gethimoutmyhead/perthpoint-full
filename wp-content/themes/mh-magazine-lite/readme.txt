@@ -1,37 +1,41 @@
-=== MH Magazine lite WordPress Theme ===
-Theme URI: http://www.mhthemes.com/themes/mh/magazine-lite/
-Tags: Blog, Magazine
-Requires at least: 4.5.0
-Tested up to: 4.6.0
-Stable tag: 2.5.3
-License: GPLv2 or later
+=== MH Magazine lite ===
+
+Contributors: mh-themes
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, full-width-template, theme-options, threaded-comments, footer-widgets, translation-ready, rtl-language-support, blog, entertainment, news
+
+Requires at least: 4.6.0
+Tested up to: 4.9.4
+Stable tag: 2.7.6
+License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-MH Magazine lite WordPress Theme, Copyright 2013-2016 MH Themes
+
+MH Magazine lite is one of the most popular free responsive magazine, news, newspaper and blog WordPress themes for modern online magazines, dynamic news websites, professional blogs and other editorial websites
+
+== Description ==
+
+MH Magazine lite is one of the most popular free responsive magazine, news, newspaper and blog WordPress themes for modern online magazines, dynamic news websites, professional blogs and other editorial websites. This free magazine theme is fast, secure, SEO friendly and perfectly suitable for topics like international news, politics, lifestyle, fashion, business, sports, gadgets, travel or anything else.
+
+If you would like to gain access to more awesome features, flexible custom widgets and useful options to customize your website, you can upgrade to the premium version of MH Magazine and take your website to the next level. You can also learn more about this dynamic magazine WordPress theme on the MH Themes website: https://www.mhthemes.com/themes/mh/magazine/
+
+== Installation ==
+
+See theme documentation: https://www.mhthemes.com/support/documentation-mh-magazine/
+
+== Frequently Asked Questions ==
+
+Coming soon!
+
+== Copyright ==
+
+MH Magazine lite WordPress Theme, Copyright 2013-2018 MH Themes
 MH Magazine lite is distributed under the terms of the GNU GPL
+Theme URI: https://www.mhthemes.com/themes/mh/magazine-lite/
 
-==================================
-Description
-==================================
+You may remove the link to the MH Themes website in the footer, but we would appreciate any attribution to our work!
 
-MH Magazine lite is a free responsive magazine, dynamic news or blog WordPress theme for modern online magazines, news websites, professional blogs and other editorial websites. If you would like to have more features, custom widgets and options to customize your website, you can upgrade to the premium version of MH Magazine. You can also learn more about this dynamic magazine WordPress theme on the MH Themes website: http://www.mhthemes.com/themes/mh/magazine/
+Bundled Resources:
 
-==================================
-Documentation & Theme Support
-==================================
-
-In case you have any questions regarding your WordPress theme, please visit our support center where you can find the theme documentation, tutorials and a lot of helpful information: http://www.mhthemes.com/support/
-
-==================================
-Credits
-==================================
-
-You may remove the link to our website in the footer, but we would appreciate any attribution to our work!
-
-==================================
-Licenses of bundled Resources
-==================================
-
-1.) Modernizr 2.8.3 (Custom Build) | MIT & BSD license
+1.) Modernizr 3.5.0 (Custom Build) | MIT & BSD license
 Source: http://modernizr.com/
 License: http://modernizr.com/license/
 
@@ -61,11 +65,96 @@ License: http://opensource.org/licenses/mit-license.php
 7.) Images from Theme Screenshot
 Source: http://pixabay.com/
 License: Free Public Domain (GPL Compatible)
-Overview: http://www.mhthemes.com/dev_magazine/credits/
+Overview: http://demo.mh-themes.com/magazine/credits/
 
-==================================
-Changelog
-==================================
+== Changelog ==
+
+= v2.7.6 18-02-2018 =
+* Fixed untranslatable string in content-loop.php
+
+= v2.7.5 04-01-2018 =
+* Updated date for copyright notice
+* Minor code improvements
+
+= v2.7.4 12-12-2017 =
+* Improved caption of featured image to use WordPress core function
+
+= v2.7.3 16-11-2017 =
+* Removed code to support shortcodes in widgets due to support by default in WP 4.9
+
+= v2.7.2 22-10-2017 =
+* CSS improvements to avoid conflicts with plugins based on Bootstrap
+
+= v2.7.1 30-09-2017 =
+* Improved footer area with flexible columns based on active widgets areas
+
+= v2.7.0 12-09-2017 =
+* Added greek translation files - thanks to Kostas Arvanitidis
+
+= v2.6.9 27-08-2017 =
+* Renamed .mh-ad-spot CSS class to .mh-info-spot to prevent blocking by ad blockers
+
+= v2.6.8 06-08-2017 =
+* Updated Modernizr to v3.5.0
+
+= v2.6.7 17-07-2017 =
+* Reformatted readme.txt file
+
+= v2.6.6 26-06-2017 =
+* Improved alignment of images in navigation (e.g. multilingual flags)
+
+= v2.6.5 01-06-2017 =
+* Minor CSS adjustments
+* Added CSS for new core widgets in WordPress 4.8
+* Updated theme description
+* Updated german translation
+* Updated translation files
+
+= v2.6.4 15-05-2017 =
+* Minor CSS fixes for navigation menu
+* Highlighted dates with posts in WordPress Calendar widget
+
+= v2.6.3 24-04-2017 =
+* Improved styling for multisite registration form
+
+= v2.6.2 07-04-2017 =
+* Added support for new product gallery feature in WooCommerce
+
+= v2.6.1 19-03-2017 =
+* Updated Font Awesome Icon Fonts to v4.7.0
+
+= v2.6.0 25-02-2017 =
+* Minor code adjustments
+
+= v2.5.9 04-02-2017 =
+* Various minor code improvements
+* Updated german translation
+* Updated translation files
+
+= v2.5.8 16-01-2017 =
+* Minor CSS adjustments
+* Replaced pagination on archives with WordPress core function the_posts_pagination()
+
+= v2.5.7 18-12-2016 =
+* Updated theme links to HTTPS
+
+= v2.5.6 09-12-2016 =
+* Removed redundant option to scale background (core functionality in WP 4.7)
+* Removed redundant function mh_magazine_lite_html_class()
+* Moved redundant mh_html_class() function to mh-compatibility.php
+* Updated translation files
+
+= v2.5.5 20-11-2016 =
+* Minor code improvements
+* Updated theme description
+* Updated german translation
+* Updated translation files
+
+= v2.5.4 24-10-2016 =
+* Minor CSS adjustments
+* Added new function mh_magazine_lite_loop_layout() to handle archive layouts
+* Removed redundant markup on theme info page
+* Changed color of button in welcome notice
 
 = v2.5.3 04-10-2016 =
 * Minor CSS adjustments

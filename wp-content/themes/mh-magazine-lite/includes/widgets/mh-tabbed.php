@@ -20,7 +20,7 @@ class mh_magazine_lite_tabbed extends WP_Widget {
 				echo $args['before_title'] . esc_html(apply_filters('widget_title', $instance['title'])) . $args['after_title'];
 			} ?>
 			<div class="mh-tabbed-widget">
-				<div class="mh-tab-buttons clearfix">
+				<div class="mh-tab-buttons mh-clearfix">
 					<a class="mh-tab-button" href="#tab-<?php echo esc_attr($args['widget_id']); ?>-1">
 						<span><i class="fa fa-newspaper-o"></i></span>
 					</a>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div class="mh-wrapper clearfix">
-	<div id="main-content" class="mh-content" role="main">
+<div class="mh-wrapper mh-clearfix">
+	<div id="main-content" class="mh-content" role="main" itemprop="mainContentOfPage">
 		<?php mh_before_page_content(); ?>
 		<header class="page-header">
 			<h1 class="page-title">
