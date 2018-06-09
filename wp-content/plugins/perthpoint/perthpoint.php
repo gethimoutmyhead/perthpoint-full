@@ -25,6 +25,7 @@
 	   		'where'=> "category.slug = '" . $variables['category_slug'] . "' AND final_date.meta_value >= NOW() - INTERVAL 1 DAY",
             'limit'=>10,
             'pagination'=>'true',
+            'orderby'=>'event_date.meta_value DESC',
 
 	   );
 	   $events = pods('event',$params);
