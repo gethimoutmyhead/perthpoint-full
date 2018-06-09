@@ -41,7 +41,7 @@
          $params = array(
                'where'=> "category.slug = '" . $variables['category_slug'] . "' AND final_date.meta_value < NOW() - INTERVAL 1 DAY",
                'limit'=>5,
-               'orderby'=>'event_date.meta_value DESC',
+               'orderby'=>'event_date.meta_value ASC',
                'pagination'=>'true',
 
          );
