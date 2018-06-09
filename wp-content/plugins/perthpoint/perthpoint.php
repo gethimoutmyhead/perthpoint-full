@@ -25,7 +25,7 @@
 	   		'where'=> "category.slug = '" . $variables['category_slug'] . "' AND final_date.meta_value >= NOW() - INTERVAL 1 DAY",
             'limit'=>10,
             'pagination'=>'true',
-            'orderby'=>'event_date.meta_value DESC',
+            'orderby'=>'event_date.meta_value',
 
 	   );
 	   $events = pods('event',$params);
@@ -59,7 +59,7 @@
          $text = $text . $signUpText;
          $params = array(
                'where'=> "category.slug = '" . $variables['category_slug'] . "' AND final_date.meta_value < NOW() - INTERVAL 1 DAY",
-               'orderby'=>'event_date.meta_value DESC',
+               'orderby'=>'event_date.meta_value',
                'limit'=>5,
                'pagination'=>'true',
 
