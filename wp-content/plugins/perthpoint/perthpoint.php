@@ -86,6 +86,24 @@
 	   //echo '<br>' . $variables['noeventblurb'];
    }
 
-   add_shortcode( 'events_list_by_category', 'eventsByCategory' );
+add_shortcode( 'events_list_by_category', 'eventsByCategory' );
+
+add_action('init', 'customRSS');
+
+function customRSS(){
+   add_feed('weeklyevents', 'eventsThisWeekFunc');
+}
+
+function eventsThisWeekFunc(){
+   get_template_part('rss', 'eventsthisweek');
+   //echo 'ducks';
+}
+
+function content_to_excerpt_strip_html($contentString){
+   $z = trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($contentString))))));
+   $count = 10;
+   preg_match("/(?:\w+(?:\W+|$)){0,$count}/", $z, $matches);
+   return $matches[0];
+}
 
 ?>
