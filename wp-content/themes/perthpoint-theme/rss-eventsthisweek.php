@@ -50,6 +50,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>';
         <guid isPermaLink="false"><?php echo $eventsThisWeek->display('permalink'); ?></guid>
         <description><?php echo content_to_excerpt_strip_html($eventsThisWeek->display('post_content')); ?></description>
         <content:encoded><?php echo content_to_excerpt_strip_html($eventsThisWeek->display('post_content')); ?></content:encoded>
+        <media:content url="<?php $postID = $eventsThisWeek->id(); $thumbID = get_post_thumbnail_id($postID); echo wp_get_attachment_image_src($thumbID,'thumbnail-size', true)[0];?>"></media:content>
         <?php rss_enclosure(); ?>
         <?php do_action('rss2_item'); ?></item>
 <?php }; ?>
